@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: renault-bot
+    runtime: python
+    buildCommand: |
+      apt-get update && apt-get install -y gcc
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      playwright install
+    startCommand: python bot.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
