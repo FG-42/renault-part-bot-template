@@ -6,7 +6,7 @@ import os
 
 API_TOKEN = os.getenv('API_TOKEN')
 if not API_TOKEN:
-    raise ValueError("8139589288:AAE99b6afU4trVS9z5_n8wvBEZqVvA_sjTw")
+    raise ValueError("Set API_TOKEN environment variable")
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
